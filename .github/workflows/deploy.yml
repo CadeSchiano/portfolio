@@ -27,6 +27,8 @@ jobs:
       - run: npm ci
       - id: pages
         uses: actions/configure-pages@v5
+        with:
+          enablement: true
       - run: npm run build -- --base="${{ steps.pages.outputs.base_path }}/"
       - uses: actions/upload-pages-artifact@v3
         with: { path: dist }

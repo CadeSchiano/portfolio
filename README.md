@@ -1,25 +1,30 @@
-# Cade Schiano — Portfolio
+# Cade Schiano Portfolio
 
-A responsive, dark-first portfolio built with React, TypeScript, Vite, Framer Motion, and Lucide.
+Employer-facing portfolio for Cade Schiano, a Computer Science student at Bowling Green State University. The site foregrounds current full-stack, backend, and data/ML work, including Repolume, Scrimnet, and the NFL Quantitative Game Model.
 
-## Run locally
+## Stack
+
+React, TypeScript, Vite, Framer Motion, Lucide, and CSS.
+
+## Local development
 
 ```bash
-npm install
+npm ci
 npm run dev
 ```
 
-## Production build
+## Validation and production build
 
 ```bash
 npm run build
 ```
 
-The GitHub Actions workflow deploys the production build to GitHub Pages when changes are pushed to `main`. Before enabling it, select **GitHub Actions** as the Pages source in the repository settings.
+The build runs TypeScript project checks and creates the static `dist/` output.
 
-## Personalize before publishing
+## Deployment
 
-- Add live demo URLs and individual GitHub repository links for each project.
-- Expand project cards into detail pages with real screenshots and live-demo URLs.
-- Replace `cadeschiano@gmail.com` if you prefer a different contact email.
-# portfolio
+Pushes to `main` deploy through GitHub Actions to GitHub Pages at [cadeschiano.github.io/portfolio](https://cadeschiano.github.io/portfolio/). The workflow passes GitHub Pages' base path to Vite and enables Pages on its first run.
+
+## Updating content
+
+Project copy, links, and skills live in [src/data.ts](src/data.ts). The résumé asset is [public/resume-cade-schiano.pdf](public/resume-cade-schiano.pdf). Before adding project media, use only sanitized screenshots captured from current public builds.
